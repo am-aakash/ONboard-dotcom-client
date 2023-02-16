@@ -33,9 +33,9 @@ export const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    <button className="btn btn-outline-success" type="submit">
+                    <Link className="btn btn-primary" to="./Login" type="submit">
                         Logout
-                    </button>
+                    </Link>
                 </div>
             </div>
         </nav>

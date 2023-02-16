@@ -4,6 +4,7 @@ import { Navbar } from "./components/navbar"
 import { Home } from "./components/home"
 import { About } from "./components/about"
 import { Company } from "./components/company"
+import Login from "./components/login"
 import EmployeeState from "./context/employees/employeesState"
 
 function App() {
@@ -19,12 +20,7 @@ function App() {
 
               <Route exact path="/About" element={<About />} />
               <Route exact path="/Company" element={<Company />} />
-              {/* <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route> */}
+              <Route exact path="/Login" element={<Login />} />
             </Routes>
           </div>
         </Router>
