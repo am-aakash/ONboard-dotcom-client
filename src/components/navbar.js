@@ -33,7 +33,7 @@ export const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    <button className="btn btn-success" type="submit">
+                    <button className="btn btn-outline-success" type="submit">
                         Logout
                     </button>
                 </div>
