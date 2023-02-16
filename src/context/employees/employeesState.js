@@ -9,11 +9,10 @@ const EmployeeState = (props) => {
     // Get all Employees
     const getEmployees = async () => {
         // API Call
-        const response = await fetch(`${host}/api/employees/fetchallEmployees`, {
+        const response = await fetch(`${host}/employee/fetch-employees`, {
             method: "GET",
             headers: {
-                // "auth-token":
-                //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzMWRjNWUzZTQwMzdjZDQ3MzRhMDY2In0sImlhdCI6MTYzMDY2OTU5Nn0.hJS0hx6I7ROugkqjL2CjrJuefA3pJi-IU5yGUbRHI4Q",
+                // "auth-token": ""
             },
             body: {
                 company_id: "12",
@@ -22,6 +21,7 @@ const EmployeeState = (props) => {
         })
         const json = await response.json()
         setEmployees(json)
+        console.log(json)
     }
 
     return (
