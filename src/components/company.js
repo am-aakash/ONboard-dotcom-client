@@ -1,6 +1,6 @@
 import React from "react"
 
-export const About = () => {
+export const Company = () => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ export const About = () => {
         height: "30vh",
       }}
     >
-      <h1>About Page</h1>
+      <h1>Company Page</h1>
     </div>
   )
 }
