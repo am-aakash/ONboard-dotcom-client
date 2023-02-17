@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-// import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" })
-    // let history = useHistory();
+    let navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await fetch("http://localhost:4444/auth/login-user", {
@@ -17,13 +17,14 @@ const Login = () => {
         let token, userData 
         console.log(responseJson)
         if (responseJson.status == 'success') {
-            // localStorage.setItem('token', token);
-            // history.push("/");
             token = responseJson.data.token.accessToken
             userData = responseJson.data.user
+            localStorage.setItem('token', token);
+            navigate("/");
+            props.showAlert(responseJson.message, responseJson.status)
         }
         else {
-            alert("Invalid credentials");
+            props.showAlert(responseJson.message, "danger")
         }
     }
 
@@ -40,7 +41,7 @@ const Login = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" value={credentials.password} onChange={onChange} name="password" id="password" />
+                    <input type="password" className="form-control" value={credentials.password} onChange={onChange} name="password" id="password" minLength={8} required />
                 </div>
                 <button type="submit" className="btn btn-primary" onSubmit={handleSubmit}>Submit</button>
             </form>
