@@ -3,6 +3,12 @@ import { Link, useLocation } from "react-router-dom"
 
 export const Navbar = () => {
     let location = useLocation();
+    const handleLogout = async (e) => {
+        e.preventDefault();
+        localStorage.setItem('token', "");
+        localStorage.setItem('user-type', null);
+        localStorage.setItem('company-id', null);
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -24,7 +30,7 @@ export const Navbar = () => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/Company" ? "active" : ""}`} aria-current="page" to="./Company">
-                                Company
+                                Company {localStorage.getItem('company-id')}
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -33,7 +39,7 @@ export const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    <Link className="btn btn-primary" to="./Login" type="submit">
+                    <Link className="btn btn-primary" to="./Login" onSubmit={handleLogout} type="submit">
                         Logout
                     </Link>
                 </div>

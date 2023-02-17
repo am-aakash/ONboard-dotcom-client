@@ -20,8 +20,10 @@ const Login = (props) => {
             token = responseJson.data.token.accessToken
             userData = responseJson.data.user
             localStorage.setItem('token', token);
-            navigate("/");
+            localStorage.setItem('user-type', userData.type);
+            localStorage.setItem('company-id', userData.company_id);
             props.showAlert(responseJson.message, responseJson.status)
+            navigate("/");
         }
         else {
             props.showAlert(responseJson.message, "danger")

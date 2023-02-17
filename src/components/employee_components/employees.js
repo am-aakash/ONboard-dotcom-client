@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import employeesContext from "../context/employees/employeesContext"
+import employeesContext from "../../context/employees/employeesContext"
 import EmployeeItem from "./employeeItem"
 
 const Employees = () => {
