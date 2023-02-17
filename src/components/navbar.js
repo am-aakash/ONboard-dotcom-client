@@ -32,18 +32,18 @@ export const Navbar = (props) => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        {localStorage.getItem('token')? <li className="nav-item">
+                        <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/Company" ? "active" : ""}`} aria-current="page" to="./Company">
                                 Company
                             </Link>
-                        </li> :""}
+                        </li>
                         <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/About" ? "active" : ""}`} to="./About">
                                 About
                             </Link>
                         </li>
                     </ul>
-                    {localStorage.getItem('token')? <button onClick={handleLogout} className="btn btn-primary"> Logout </button> : ""}
+                    <button onClick={handleLogout} className="btn btn-primary"> Logout </button>
                 </div>
             </div>
         </nav>
