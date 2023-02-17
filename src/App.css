@@ -42,6 +42,47 @@
   font-weight: 600;
 }
 
+.container{
+  justify-content: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+.listheading{
+  color: rgb(156, 153, 153);
+  text-transform: capitalize;
+}
+.profilePic img{
+  height:40px;
+  width:40px;
+  border-radius:500px;
+  /* border: 1px solid rgb(255, 255, 255); */
+  margin-right:15px;
+}
+.date{
+  font-size: small;
+  margin-top: 10px;
+  color: rgb(102, 90, 90);
+}
+.team{
+  font-size: small;
+  color:blue;
+  margin-top: 10px;
+}
+.name p{
+  font-size: smaller;
+  color: rgb(142, 142, 142);
+}
+.name{
+  /* font-size: smaller; */
+  color: rgb(0, 0, 0);
+}
+.pp{
+  display: flex;
+}
+.pp2{
+  display: flex;
+  margin-top: 10px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
