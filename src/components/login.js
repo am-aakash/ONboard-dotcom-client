@@ -6,29 +6,25 @@ const Login = () => {
     // let history = useHistory();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // const response = await fetch("http://localhost:4444/auth/login-user", {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({ email: credentials.email, password: credentials.password, type: 1 })
-        // });
-        const response = await fetch("http://localhost:4444/auth/user-list", {
-            mode: 'no-cors',
-            method: 'GET',
+        const response = await fetch("http://localhost:4444/auth/login-user", {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
+            body: JSON.stringify({ email: credentials.email, password: credentials.password, type: 1 })
         });
-        const json = await response.json()
-        console.log(json);
-        // if (json.success) {
-        //     // localStorage.setItem('token', json.authtoken);
-        //     history.push("/");
-        // }
-        // else {
-        //     alert("Invalid credentials");
-        // }
+        const responseJson = await response.json()
+        let token, userData 
+        console.log(responseJson)
+        if (responseJson.status == 'success') {
+            // localStorage.setItem('token', token);
+            // history.push("/");
+            token = responseJson.data.token.accessToken
+            userData = responseJson.data.user
+        }
+        else {
+            alert("Invalid credentials");
+        }
     }
 
     const onChange = (e) => {
