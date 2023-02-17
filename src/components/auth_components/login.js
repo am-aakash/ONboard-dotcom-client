@@ -12,7 +12,8 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if(value === '0'){
-      props.showAlert("Select User Type", "Danger")
+      props.showAlert("Select User Type", "danger")
+      return
     }
     const response = await fetch("http://localhost:4444/auth/login-user", {
       method: "POST",
