@@ -25,15 +25,15 @@ function App() {
     <>
       <EmployeeState>
         <Router>
-          <Navbar />
+          <Navbar showAlert={showAlert} />
           <Alert alert={alert} />
           <div className="container">
             <Routes>
-              <Route exact path="/" element={<Home />} />
+              <Route exact path="/" element={<Home showAlert={showAlert} />} />
 
               <Route exact path="/About" element={<About />} />
               <Route exact path="/Company" element={<Company />} />
-              <Route exact path="/Login" element={<Login showAlert={showAlert}/>} />
+              <Route exact path="/Login" element={<Login showAlert={showAlert} />} />
             </Routes>
           </div>
         </Router>
