@@ -25,7 +25,7 @@ function App() {
     <>
       <EmployeeState>
         <Router>
-          {localStorage.getItem('token') ? <Navbar showAlert={showAlert} /> : ""}
+          {localStorage.getItem('token') && <Navbar showAlert={showAlert} />}
           <Alert alert={alert} />
           <div className="container">
             <Routes>
