@@ -9,6 +9,7 @@ import Alert from "./components/helper/alert"
 import Login from "./components/auth_components/login"
 import EmployeeState from "./context/employees/employeesState"
 import EmployeeDetails from "./components/employee_components/employeeDetails"
+import AddEmployee from "./components/employee_components/addEmployee"
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -37,6 +38,7 @@ function App() {
 
               <Route exact path="/About" element={<About />} />
               <Route exact path="/Company" element={<Company />} />
+              <Route exact path="/Add-employee" element={<AddEmployee />} />
               <Route exact path="/EmployeeDetails" element={<EmployeeDetails />} />
               <Route exact path="/Login" element={<Login showAlert={showAlert} />} />
             </Routes>

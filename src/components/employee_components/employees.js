@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { Link } from "react-router-dom"
 import employeesContext from "../../context/employees/employeesContext"
 import EmployeeItem from "./employeeItem"
 import Button from 'react-bootstrap/Button';
@@ -29,7 +30,7 @@ const Employees = () => {
             justifyContent: "center",
             alignItems: "center",
         }}>
-            <div className="row mb-3" style={{ marginBottom: '0rem',  marginTop: '3.4rem' }}>
+            <div className="row mb-3" style={{ marginBottom: '0rem', marginTop: '3.4rem' }}>
                 <div className="col"><h5 style={{ fontWeight: '600' }}>List of Employees</h5></div>
                 <div className="col">
                     <div className="row mb-3">
@@ -49,7 +50,11 @@ const Employees = () => {
                             <Button variant="dark" style={{ width: '6rem' }}> <IoIosSwitch style={{ marginBottom: '0.3rem' }} /> Filter</Button>
                         </div>
                         <div className="col">
-                            <Button variant="dark" style={{ width: '12rem' }}> <AiOutlineUserAdd style={{ marginBottom: '0.3rem' }} /> Add new employee</Button>
+                            <Link to="./Add-employee">
+                                <Button variant="dark" style={{ width: '12rem' }}>
+                                    <AiOutlineUserAdd style={{ marginBottom: '0.3rem' }} /> Add new employee
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
