@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useLocation } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
+import { FaBox } from "react-icons/fa";
 
 export const Navbar = (props) => {
     let location = useLocation();
@@ -17,7 +18,7 @@ export const Navbar = (props) => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="./">
-                    Onboard.com
+                    <FaBox style={{ marginBottom: '0.3rem', marginLeft: '2rem', marginRight: '0.2rem' }} /> Onboard.com
                 </Link>
                 <button
                     className="navbar-toggler"
@@ -43,7 +44,7 @@ export const Navbar = (props) => {
                             </Link>
                         </li>
                     </ul>
-                    <button onClick={handleLogout} className="btn btn-primary"> Logout </button>
+                    <button onClick={handleLogout} className="btn btn-primary" style={{ marginRight: '2rem' }}> Logout </button>
                 </div>
             </div>
         </nav>

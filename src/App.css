@@ -65,8 +65,9 @@
 }
 .team{
   font-size: small;
-  color:blue;
+  color:rgb(84, 123, 230);
   margin-top: 10px;
+  font-weight: 600;
 }
 .name p{
   font-size: smaller;

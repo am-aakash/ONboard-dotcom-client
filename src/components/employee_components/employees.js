@@ -2,6 +2,8 @@ import React, { useContext } from "react"
 import employeesContext from "../../context/employees/employeesContext"
 import EmployeeItem from "./employeeItem"
 import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Form from 'react-bootstrap/Form';
 import { IoIosSwitch } from "react-icons/io";
 import { AiOutlineUserAdd } from "react-icons/ai";
@@ -9,6 +11,13 @@ import { AiOutlineUserAdd } from "react-icons/ai";
 const Employees = () => {
     const context = useContext(employeesContext)
     const { employees } = context
+    let size = employees.length;
+    let pages = [], i = 1;
+    while (size > 0) {
+        pages[i - 1] = i;
+        size--;
+        i++;
+    }
     // const [keyword, setKeyword] = useState("");
     // const onChange = (e) => {
     //     setKeyword(e)
@@ -44,14 +53,6 @@ const Employees = () => {
                     </div>
                 </div>
             </div>
-            <div style={{ marginTop: '0.5rem' }}>
-                {employees.length === 0 && <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "30vh",
-                }}><h6>No employees to display</h6></div>}
-            </div>
             <div className="listheading row mb-3">
                 <div className="col" style={{ marginLeft: '2.8rem' }}>Name</div>
                 <div className="col-4" >Status</div>
@@ -64,12 +65,30 @@ const Employees = () => {
                     height: 2
                 }}
             />
+            <div style={{ marginTop: '0rem' }}>
+                {employees.length === 0 && <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "30vh",
+                }}><h5 style={{ fontWeight: '500' }}>No employees to display</h5></div>}
+            </div>
             {employees.map((employee) => {
                 return <EmployeeItem employee={employee} />
             })}
-            <div style={{
-                height: "5vh",
-            }}></div>
+            <ButtonToolbar aria-label="Pages Toolbar" style={{
+                marginTop: "1rem", 
+                marginBottom: "1rem", 
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
+                {pages.map((page) => {
+                    return <ButtonGroup>
+                        <Button style={{ marginRight: "1rem", paddingLeft: '0.9rem', paddingRight: '0.9rem' }}>{page}</Button>
+                    </ButtonGroup>
+                })}
+            </ButtonToolbar>
         </div>
     )
 }
