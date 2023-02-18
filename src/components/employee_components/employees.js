@@ -7,6 +7,7 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Form from 'react-bootstrap/Form';
 import { IoIosSwitch } from "react-icons/io";
 import { AiOutlineUserAdd } from "react-icons/ai";
+import { BiSearchAlt } from "react-icons/bi";
 
 const Employees = () => {
     const context = useContext(employeesContext)
@@ -41,7 +42,7 @@ const Employees = () => {
                                     aria-label="Search"
                                 // onChange={onChange}
                                 />
-                                <Button variant="success">Search</Button>
+                                <Button variant="secondary"><BiSearchAlt style={{ marginBottom: '0.3rem', scale: '1.4' }} /></Button>
                             </Form>
                         </div>
                         <div className="col">
@@ -77,8 +78,8 @@ const Employees = () => {
                 return <EmployeeItem employee={employee} />
             })}
             <ButtonToolbar aria-label="Pages Toolbar" style={{
-                marginTop: "1rem", 
-                marginBottom: "1rem", 
+                marginTop: "1rem",
+                marginBottom: "1rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center"

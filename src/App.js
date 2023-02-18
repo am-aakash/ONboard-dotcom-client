@@ -8,6 +8,7 @@ import { Company } from "./components/company"
 import Alert from "./components/helper/alert"
 import Login from "./components/auth_components/login"
 import EmployeeState from "./context/employees/employeesState"
+import EmployeeDetails from "./components/employee_components/employeeDetails"
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -29,10 +30,11 @@ function App() {
           <Alert alert={alert} />
           <div className="container">
             <Routes>
-              <Route exact path="/" element={<Home showAlert={showAlert} />} />
+              <Route exact path="/" element={(localStorage.getItem('user-type') === '3') ? <EmployeeDetails showAlert={showAlert}/> : <Home showAlert={showAlert} />} />
 
               <Route exact path="/About" element={<About />} />
               <Route exact path="/Company" element={<Company />} />
+              <Route exact path="/EmployeeDetails" element={<EmployeeDetails />} />
               <Route exact path="/Login" element={<Login showAlert={showAlert} />} />
             </Routes>
           </div>
