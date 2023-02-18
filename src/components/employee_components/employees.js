@@ -29,7 +29,7 @@ const Employees = () => {
             justifyContent: "center",
             alignItems: "center",
         }}>
-            <div className="row mb-3" style={{ marginBottom: '0rem' }}>
+            <div className="row mb-3" style={{ marginBottom: '0rem',  marginTop: '3.4rem' }}>
                 <div className="col"><h5 style={{ fontWeight: '600' }}>List of Employees</h5></div>
                 <div className="col">
                     <div className="row mb-3">

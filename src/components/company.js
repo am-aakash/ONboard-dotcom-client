@@ -7,7 +7,8 @@ export const Company = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "30vh",
+        // marginTop: '3.4rem'
+        marginTop: '10rem'
       }}
     >
       <h1>Company Page</h1>

@@ -30,7 +30,10 @@ function App() {
           <Alert alert={alert} />
           <div className="container">
             <Routes>
-              <Route exact path="/" element={(localStorage.getItem('user-type') === '3') ? <EmployeeDetails showAlert={showAlert}/> : <Home showAlert={showAlert} />} />
+              <Route exact path="/" element={(localStorage.getItem('user-type') === '3') ?
+                <EmployeeDetails showAlert={showAlert} /> :
+                <Home showAlert={showAlert} />
+              } />
 
               <Route exact path="/About" element={<About />} />
               <Route exact path="/Company" element={<Company />} />

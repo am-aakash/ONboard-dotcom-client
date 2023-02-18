@@ -7,7 +7,8 @@ export const About = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "30vh",
+        // marginTop: '3.4rem'
+        marginTop: '10rem'
       }}
     >
       <h1>About Page</h1>

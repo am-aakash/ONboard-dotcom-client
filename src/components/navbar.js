@@ -15,7 +15,7 @@ export const Navbar = (props) => {
         navigate("./Login")
     }
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark ">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="./">
                     <FaBox style={{ marginBottom: '0.3rem', marginLeft: '2rem', marginRight: '0.2rem' }} /> Onboard.com

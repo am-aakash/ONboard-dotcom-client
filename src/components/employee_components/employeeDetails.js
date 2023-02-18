@@ -1,13 +1,13 @@
 import React from 'react'
 
-const EmployeeDetails = () => {
+const EmployeeDetails = (props) => {
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "30vh",
+        marginTop: '10rem'
       }}
     >
       <h1>Employee Details</h1>
