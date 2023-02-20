@@ -2,6 +2,8 @@ import React from 'react'
 import avatar from '../../../assets/avatar.jpg'
 import './employeeDetails.css'
 import CurrentStatusCard from './currentStatusCard'
+import StatusHistoryCard from './statusHistoryCard'
+import OnboardingSetup from './onboardingSetupCard'
 
 const EmployeeDetails = (props) => {
   return (
@@ -35,6 +37,8 @@ const EmployeeDetails = (props) => {
         </div>
       </div>
       <CurrentStatusCard />
+      <StatusHistoryCard />
+      <OnboardingSetup />
     </div>
   )
 }
