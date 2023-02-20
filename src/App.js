@@ -10,6 +10,7 @@ import Login from "./components/auth_components/login"
 import EmployeeState from "./context/employees/employeesState"
 import EmployeeDetails from "./components/employee_components/employee_details/employeeDetails"
 import AddEmployee from "./components/employee_components/addEmployee"
+import Footer from "./components/helper/footer"
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -43,6 +44,7 @@ function App() {
               <Route exact path="/Login" element={<Login showAlert={showAlert} />} />
             </Routes>
           </div>
+          {localStorage.getItem('token') && <Footer />}
         </Router>
       </EmployeeState>
     </>

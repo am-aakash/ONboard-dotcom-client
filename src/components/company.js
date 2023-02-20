@@ -7,7 +7,7 @@ export const Company = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // marginTop: '3.4rem'
+        marginBottom: '35%',
         marginTop: '10rem'
       }}
     >

@@ -7,7 +7,8 @@ const AddEmployee = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: '10rem'
+                marginTop: '10rem',
+                marginBottom: '35%',
             }}
         >
             <h1>Add new employee</h1>
