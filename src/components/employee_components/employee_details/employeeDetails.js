@@ -1,5 +1,4 @@
 import React from 'react'
-import avatar from '../../../assets/avatar.jpg'
 import './employeeDetails.css'
 import CurrentStatusCard from './currentStatusCard'
 import StatusHistoryCard from './statusHistoryCard'
@@ -18,7 +17,7 @@ const EmployeeDetails = (props) => {
         <div className="col">
           <div style={{ display: 'flex' }}>
             <div className="profilePicBig">
-              <img src={avatar} alt="avatar" />
+              <img src={require('../../../assets/avatar.jpg')} alt="avatar" />
             </div>
             <div style={{ marginLeft: '1.2rem', marginTop: '3.2rem', width: '20rem' }}>
               <h2 style={{ fontWeight: '600' }}>Test Employee Name</h2>
