@@ -8,7 +8,7 @@ import { Company } from "./components/company"
 import Alert from "./components/helper/alert"
 import Login from "./components/auth_components/login"
 import EmployeeState from "./context/employees/employeesState"
-import EmployeeDetails from "./components/employee_components/employeeDetails"
+import EmployeeDetails from "./components/employee_components/employee_details/employeeDetails"
 import AddEmployee from "./components/employee_components/addEmployee"
 
 function App() {

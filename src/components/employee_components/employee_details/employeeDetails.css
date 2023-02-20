@@ -1,0 +1,27 @@
+.profilePicBig img {
+  height: 240px;
+  width: 240px;
+  border-radius: 500px;
+  margin-right: 2.5rem;
+  margin-left: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.113) 1px 1px 10px;
+}
+.dateBig {
+  font-size: small;
+  /* margin-top: 10px; */
+  color: rgb(102, 90, 90);
+}
+.teamBig {
+  font-size: small;
+  color: rgb(84, 123, 230);
+  margin-top: 10px;
+  font-weight: 600;
+}
+.nameBig p {
+  font-size: small;
+  color: rgb(142, 142, 142);
+}
+.nameBig {
+  font-size: large;
+  color: rgb(0, 0, 0);
+}
