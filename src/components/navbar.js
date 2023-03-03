@@ -1,6 +1,5 @@
 import React from "react"
-import { Link, useLocation } from "react-router-dom"
-import { useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { FaBox } from "react-icons/fa";
 
 export const Navbar = (props) => {
