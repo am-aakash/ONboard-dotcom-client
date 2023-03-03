@@ -36,7 +36,6 @@ const Login = (props) => {
       localStorage.setItem("user-type", userData.type)
       localStorage.setItem("company-id", userData.company_id)
       props.showAlert(responseJson.message, responseJson.status)
-      if(userData.type == 2) {}
       navigate("/")
     } else {
       props.showAlert(responseJson.message, "danger")

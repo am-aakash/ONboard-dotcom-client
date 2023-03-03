@@ -11,7 +11,7 @@ export const Navbar = (props) => {
         localStorage.removeItem('user-type');
         localStorage.removeItem('company-id');
         props.showAlert("Logged out", "success")
-        navigate("./Login")
+        navigate("./login")
     }
     return (
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark ">
@@ -33,12 +33,12 @@ export const Navbar = (props) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname === "/Company" ? "active" : ""}`} aria-current="page" to="./Company">
+                            <Link className={`nav-link ${location.pathname === "/company" ? "active" : ""}`} aria-current="page" to="./Company">
                                 Company
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname === "/About" ? "active" : ""}`} to="./About">
+                            <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="./About">
                                 About
                             </Link>
                         </li>

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom";
 import { Navbar } from "./components/navbar"
 import { Home } from "./components/employee_components/home"
 import { About } from "./components/about"
@@ -36,15 +37,16 @@ function App() {
                 <EmployeeDetails showAlert={showAlert} /> :
                 <Home showAlert={showAlert} />
               } />
+              <Route exact path="/about" element={<About />} />
+              <Route exact path="/company" element={<Company />} />
+              <Route exact path="/add-employee" element={<AddEmployee />} />
+              <Route exact path="/employee" element={<EmployeeDetails />} />
 
-              <Route exact path="/About" element={<About />} />
-              <Route exact path="/Company" element={<Company />} />
-              <Route exact path="/Add-employee" element={<AddEmployee />} />
-              <Route exact path="/EmployeeDetails" element={<EmployeeDetails />} />
-              {localStorage.getItem('token') === null &&
-                <Route exact path="/Login"
+              <Route element={<ProtectedRoutes auth={localStorage.getItem('token') === null} />}>
+                <Route exact path="/login"
                   element={localStorage.getItem('token') === null ? <Login showAlert={showAlert} /> : <Home showAlert={showAlert} />}
-                />}
+                />
+              </Route>
             </Routes>
           </div>
           {localStorage.getItem('token') && <Footer />}
@@ -52,6 +54,10 @@ function App() {
       </EmployeeState>
     </>
   )
+}
+
+const ProtectedRoutes = ({ auth }) => {
+  return (auth === true ? <Outlet /> : <Navigate to="/" replace />)
 }
 
 export default App
