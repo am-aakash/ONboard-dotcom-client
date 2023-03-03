@@ -41,7 +41,10 @@ function App() {
               <Route exact path="/Company" element={<Company />} />
               <Route exact path="/Add-employee" element={<AddEmployee />} />
               <Route exact path="/EmployeeDetails" element={<EmployeeDetails />} />
-              {localStorage.getItem('token') === null && <Route exact path="/Login" element={<Login showAlert={showAlert} />} />}
+              {localStorage.getItem('token') === null &&
+                <Route exact path="/Login"
+                  element={localStorage.getItem('token') === null ? <Login showAlert={showAlert} /> : <Home showAlert={showAlert} />}
+                />}
             </Routes>
           </div>
           {localStorage.getItem('token') && <Footer />}
