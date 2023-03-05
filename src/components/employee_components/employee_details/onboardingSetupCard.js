@@ -1,17 +1,11 @@
 import React from 'react'
-
+import './onboardingSetupCard.css'
 const ImageCard = (props) => {
   const { setup } = props
   return (
-    <div class="col-4" style={{
-      marginRight: '8rem',
-      width: '14rem',
-      height: '14rem',
-      boxShadow: 'rgba(10, 10, 10, 0.1) 1px 1px 10px',
-      borderRadius: '500px',
-      alignContent: 'center'
+    <div class="col-4 lap-img" style={{
     }}>
-      <img src={setup.location} style={{width: '14rem', height: '14rem'}} alt="setup" />
+      <img src={setup.location} alt="setup" />
     </div>
   );
 }
@@ -55,19 +49,38 @@ const OnboardingSetup = () => {
     },
   ]
   return (
-    <div style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 1px 1px 10px', borderRadius: '10px', paddingTop: '1.2rem', paddingBottom: '1rem', marginTop: '2.5rem', marginBottom: '2rem' }}>
-      <h3 style={{ textAlign: 'center', fontWeight: '600', marginBottom: '3rem' }}>Onboarding Setup and Devices</h3>
-      <div className='row' style={{ marginLeft:'8rem', marginBottom: '3rem'}}>
-        <div className='col'><ImageCard setup={setups[0]} /></div>
-        <div className='col'><ImageCard setup={setups[1]} /></div>
-        <div className='col'><ImageCard setup={setups[2]} /></div>
+
+    <div className="container">
+        <h3 style={{ textAlign: 'center', fontWeight: '600', marginBottom: '3rem' }}>Onboarding Setup and Devices</h3>
+ 
+    <div className="box-container" >
+    
+      <div className="box">
+      <div className='col'><ImageCard setup={setups[0]} /></div>
       </div>
-      <div className='row' style={{ marginLeft:'8rem', marginBottom: '3rem', textAlign: 'center'}}>
-        <div className='col'><ImageCard setup={setups[3]} /></div>
-        <div className='col'><ImageCard setup={setups[4]} /></div>
-        <div className='col'><ImageCard setup={setups[4]} /></div>
+
+      <div className="box">
+      <div className='col'><ImageCard setup={setups[1]} /></div>
+      </div>
+
+      <div className="box">
+      <div className='col'><ImageCard setup={setups[2]} /></div>
+      </div>
+
+      <div className="box">
+      <div className='col'><ImageCard setup={setups[3]} /></div>
+      </div>
+
+      <div className="box">
+      <div className='col'><ImageCard setup={setups[4]} /></div>
+      </div>
+
+      <div className="box">
+      <div className='col'><ImageCard setup={setups[4]} /></div>
+      </div>
       </div>
     </div>
+
   )
 }
 

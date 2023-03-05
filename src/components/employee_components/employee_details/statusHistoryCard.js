@@ -1,27 +1,23 @@
 import React from 'react'
+import './statusHistoryCard.css'
 
 const HistoryDateStatusCard = (props) => {
     const { history } = props
     return (
-        <div className="row" style={{ marginTop: '2rem'}}>
-            <div className="col">
-                <h5 style={{ fontWeight: '600', marginTop: '1.2rem', marginLeft: '10rem' }}> {history.date} </h5>
+        <div className="HS">
+
+            <div className="HS1">
+                <h5> {history.date} </h5>
             </div>
-            <div class="col-4" style={{
-                marginRight: '8rem',
-                width: '48rem',
-                paddingTop: '0.8rem',
-                paddingBottom: '0rem',
-                paddingLeft: '2rem',
-                paddingRight: '2rem',
-                boxShadow: 'rgba(80, 80, 80, 0.1) 1px 1px 10px',
-                borderRadius: '10px',
-            }}>
+
+            <div class="HS2">
                 <div className="nameBig" >
                     <div className="fullname"> {history.status} </div>
                     <p className="designation"> {history.subHeading} </p>
                 </div>
+
             </div>
+            
         </div>
     )
 }

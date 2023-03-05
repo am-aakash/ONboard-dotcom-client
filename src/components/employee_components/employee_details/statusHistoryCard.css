@@ -1,0 +1,30 @@
+.HS{
+    width:80%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(80, 80, 80, 0.1) 1px 1px 10px;
+    border-radius: 10px;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nameBig{
+    align-items: center;
+}
+
+.HS1 h5{
+    font-weight: 600;     
+}
+
+@media only screen and (max-width: 884px) {
+    .HS{
+        width: 100%;
+    }
+    .HS1 h5{
+        font-size: 15px;
+    }
+}

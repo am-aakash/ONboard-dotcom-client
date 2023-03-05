@@ -1,0 +1,30 @@
+.c{
+    display: flex;
+    justify-content: center;
+}
+
+.c1{
+    margin-right: 10%;
+}
+
+.c1 h5{
+    font-weight: 600;
+    margin-top: 0.6rem; 
+}
+
+@media only screen and (max-width: 535px) {
+    .c1{
+        margin-right: 5%;
+    }
+
+    .c1 h5{
+        font-size:15px;
+    }
+
+    .fullname{
+        font-size:10px;
+    }
+    .designation{
+        font-size: 5px;
+    }
+}
