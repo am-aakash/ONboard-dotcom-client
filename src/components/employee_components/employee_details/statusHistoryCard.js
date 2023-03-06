@@ -11,7 +11,7 @@ const HistoryDateStatusCard = (props) => {
             </div>
 
             <div class="HS2">
-                <div className="nameBig" >
+                <div className="nameBig2" >
                     <div className="fullname"> {history.status} </div>
                     <p className="designation"> {history.subHeading} </p>
                 </div>

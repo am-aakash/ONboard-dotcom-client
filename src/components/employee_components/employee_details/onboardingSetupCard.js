@@ -55,6 +55,7 @@ const OnboardingSetup = () => {
  
     <div className="box-container" >
     
+    <div className='boxy'>
       <div className="box">
       <div className='col'><ImageCard setup={setups[0]} /></div>
       </div>
@@ -77,6 +78,7 @@ const OnboardingSetup = () => {
 
       <div className="box">
       <div className='col'><ImageCard setup={setups[4]} /></div>
+      </div>
       </div>
       </div>
     </div>

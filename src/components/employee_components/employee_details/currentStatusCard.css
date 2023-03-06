@@ -1,6 +1,7 @@
 .c{
     display: flex;
     justify-content: center;
+    padding: auto;
 }
 
 .c1{

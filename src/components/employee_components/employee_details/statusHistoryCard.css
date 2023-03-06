@@ -5,26 +5,67 @@
     justify-content:space-around;
     align-items: center;
     text-align: center;
-    box-shadow: rgba(80, 80, 80, 0.1) 1px 1px 10px;
     border-radius: 10px;
     padding-left:10px;
     padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
 }
-.nameBig{
-    align-items: center;
+.nameBig2{
+    box-shadow: rgba(80, 80, 80, 0.1) 1px 1px 10px;
+    text-align: start;
+    align-items: flex-start;
+    width: 650px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 8px;
+
 }
 
 .HS1 h5{
     font-weight: 600;     
 }
-
+@media only screen and (max-width: 1201px){
+    .nameBig2{
+        width:400px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media only screen and (max-width: 999px){
+    .nameBig2{
+        width:220px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 @media only screen and (max-width: 884px) {
+    .fullname{
+        font-size: 15px;
+    }
     .HS{
         width: 100%;
+    }
+    .HS1 h5{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 539px){
+    .designation{
+        font-size: 10px;
+        color: gray;
+    }
+}
+
+@media only screen and (max-width: 418px){
+    .nameBig2{
+        width:180px;
     }
     .HS1 h5{
         font-size: 15px;
     }
 }
+/* 539 */
